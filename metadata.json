@@ -1,0 +1,13 @@
+{
+    "name" : "AIDO - Common Package",
+    "description" : "Provides utilities shared among all the AIDO packages",
+    "core" : {
+        "namespace" : "aido",
+        "file" : "AIDOD.php",
+        "class" : "AIDO"
+    },
+    "dependencies" : {
+        "system-packages" : [],
+        "packages" : []
+    }
+}
