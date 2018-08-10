@@ -1,5 +1,5 @@
 {
-    "name" : "AIDO - Common Package",
+    "name" : "AIDO - Common",
     "description" : "Provides utilities shared among all the AIDO packages",
     "core" : {
         "namespace" : "aido",

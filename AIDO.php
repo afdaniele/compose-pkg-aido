@@ -35,7 +35,8 @@ class AIDO{
      */
 	public static function init(){
 		if( !self::$initialized ){
-			// do stuff
+			// load style
+			echo sprintf('<style type="text/css">%s</style>', file_get_contents(__DIR__.'/css/aido.css'));
 			//
 			self::$initialized = true;
 			return ['success' => true, 'data' => null];
