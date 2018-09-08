@@ -86,7 +86,8 @@ class AIDO{
 			'failed',
 			'evaluating',
 			'retired',
-			'aborted'
+			'aborted',
+			'error'
 		];
 	}//getSubmissionsStatusList
 
@@ -117,6 +118,10 @@ class AIDO{
 			case 'aborted':
 				$icon = 'hand-paper-o';
 				$color = 'red';
+				break;
+			case 'error':
+				$icon = 'bug';
+				$color = 'black';
 				break;
 			default: break;
 		}
@@ -175,12 +180,12 @@ class AIDO{
 				'success'=>false,
 				'data'=>sprintf(
 					'An error occurred while talking to the challenges API. The server reports: "%s"',
-					json_encode($decoded['result'])
+					$decoded['msg']
 				)
 			];
 		}
 		// success
-		return [ 'success'=>true, 'data'=>$decoded['result'] ];
+		return [ 'success'=>true, 'data'=>$decoded['result'], 'total'=>$decoded['total'] ];
 	}//callChallengesAPI
 
 
