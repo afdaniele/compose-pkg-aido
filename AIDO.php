@@ -21,7 +21,7 @@ class AIDO{
 	private static $initialized = false;
 	private static $challenges_api_protocol = "https";
 	private static $challenges_api_host = "challenges.duckietown.org";
-	private static $challenges_api_version = "v2";
+	private static $challenges_api_version = "v3";
 
 	// disable the constructor
 	private function __construct() {}
@@ -150,6 +150,20 @@ class AIDO{
 			is_null($action)? '' : sprintf('/%s', $action),
 			$querystring
 		);
+
+
+		// TODO: DEBUG only
+		// $url = sprintf(
+		// 	'%s://%s/%s%s%s',
+		// 	'http',
+		// 	'172.17.0.6:6543',
+		// 	$service,
+		// 	is_null($action)? '' : sprintf('/%s', $action),
+		// 	$querystring
+		// );
+		// TODO: DEBUG only
+
+
 		// configure a CURL object
 		$curl = curl_init($url);
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
