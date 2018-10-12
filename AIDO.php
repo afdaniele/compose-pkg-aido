@@ -168,8 +168,8 @@ class AIDO{
 		$curl = curl_init($url);
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($curl, CURLOPT_CUSTOMREQUEST, $method);
-		if( $method == 'POST' )
-			curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($post_data));
+		if( in_array($method, ['POST', 'DELETE']) )
+			curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($data));
 		if( !is_null($token) )
 			array_push($headers, sprintf('X-Messaging-Token: %s', $token));
 		curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
