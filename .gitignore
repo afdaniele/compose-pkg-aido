@@ -4,3 +4,6 @@ configuration/configuration.json
 # v0.7 ->
 .DS_Store
 *disabled.flag
+
+# Global
+.remote-sync.json
