@@ -41,7 +41,7 @@ class AIDO{
 	public static function init(){
 		if(!self::$initialized){
 			// register style
-			Core::registerCSSstylesheet('aido.css', 'aido');
+			Core::registerCSSstylesheet('aido.css', 'aido_common');
 			//
 			self::$initialized = true;
 			return ['success' => true, 'data' => null];
