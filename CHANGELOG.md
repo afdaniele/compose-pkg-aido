@@ -1,3 +1,6 @@
+## 0.1.5 (April 24, 2019)
+  - added AIDO2 logo
+
 ## 0.1.4 (April 24, 2019)
   - added AIDO2 logo
 
